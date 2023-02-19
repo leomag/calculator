@@ -11,7 +11,7 @@ public class Calculator {
 
     public int min(final int... numbers) {
         return IntStream.of(numbers)
-                .min().getAsInt();
+                .min().orElseThrow();
     }
 
     public int divide(final int a, final int b) {

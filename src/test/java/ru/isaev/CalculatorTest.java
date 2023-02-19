@@ -21,7 +21,7 @@ class CalculatorTest {
     @DisplayName("Add two numbers")
     void add() {
         // when:
-        int actual = calculator.add(5, 4);
+        final int actual = calculator.add(5, 4);
         // result:
         assertEquals(9, actual);
     }
@@ -38,13 +38,13 @@ class CalculatorTest {
     @Test
     @DisplayName("Min from numbers")
     void min() {
-        int actual = calculator.min(3, 43, 1, -2);
+        final int actual = calculator.min(3, 43, 1, -2);
         assertEquals(-2, actual);
     }
 
     @ParameterizedTest
     @ValueSource(ints = {1, 3, 5, -3, 15})
-    void isOdd(int number) {
+    void isOdd(final int number) {
         assertTrue(calculator.isOdd(number));
     }
 
